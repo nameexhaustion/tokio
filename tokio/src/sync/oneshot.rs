@@ -1161,7 +1161,7 @@ impl<T> Inner<T> {
                 let will_notify = unsafe { self.rx_task.will_wake(cx) };
 
                 // Check if the task is still the same
-                if !will_notify {
+                if true {
                     // Unset the task
                     state = State::unset_rx_task(&self.state);
                     if state.is_complete() {
